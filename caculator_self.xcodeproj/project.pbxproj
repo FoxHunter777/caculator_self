@@ -18,6 +18,7 @@
 		57F5DF942C3F6F87007507C3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F5DF932C3F6F87007507C3 /* Product.swift */; };
 		57F5DF962C3F70EE007507C3 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F5DF952C3F70EE007507C3 /* CalculatorView.swift */; };
 		57F5DF992C3F78F6007507C3 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F5DF982C3F78F6007507C3 /* CalculatorController.swift */; };
+		57F5DF9C2C3FF89E007507C3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F5DF9B2C3FF89E007507C3 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		57F5DF932C3F6F87007507C3 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		57F5DF952C3F70EE007507C3 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		57F5DF982C3F78F6007507C3 /* CalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
+		57F5DF9B2C3FF89E007507C3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		57F5DF622C3F6A2C007507C3 /* caculator_self */ = {
 			isa = PBXGroup;
 			children = (
+				57F5DF9A2C3FF88A007507C3 /* ViewModel */,
 				57F5DF972C3F78E3007507C3 /* Controller */,
 				57F5DF8E2C3F6F16007507C3 /* Model */,
 				57F5DF8D2C3F6F11007507C3 /* View */,
@@ -161,6 +164,14 @@
 				57F5DF982C3F78F6007507C3 /* CalculatorController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		57F5DF9A2C3FF88A007507C3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				57F5DF9B2C3FF89E007507C3 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 				57F5DF642C3F6A2C007507C3 /* caculator_selfApp.swift in Sources */,
 				57F5DF922C3F6F4E007507C3 /* CompareView.swift in Sources */,
 				57F5DF942C3F6F87007507C3 /* Product.swift in Sources */,
+				57F5DF9C2C3FF89E007507C3 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
