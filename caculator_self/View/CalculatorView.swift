@@ -19,14 +19,13 @@ struct CalculatorView: View {
     
     var body: some View {
         VStack{
+            Divider()
+                .padding(.bottom, 50)
             VStack{
-                
                 HStack {
                     Text("g당 ")
                         .font(.largeTitle)
-                    
                     Spacer()
-                    
                     Text(gprice)
                         .font(.largeTitle)
                     Text("원")
@@ -47,6 +46,9 @@ struct CalculatorView: View {
                 
             }.padding(.bottom, 50)
                 .padding(.horizontal, 70)
+            
+            Divider()
+                .padding(.bottom, 50)
             
             VStack(alignment: .center) {
                 HStack{
