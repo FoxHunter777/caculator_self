@@ -7,7 +7,9 @@
 
 import Foundation
 
-class Price{
+class Price: Identifiable, ObservableObject{
+    var id = UUID()
+    
     var per_gram:Int = 0
     var per_one:Int = 0
     var name:String = ""
