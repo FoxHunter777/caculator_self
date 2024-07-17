@@ -106,7 +106,7 @@ struct CalculatorView: View {
                     
                     HStack {
                         Button(action: {
-                            var g = Float(tmpPrice)! / Float(tmpweight)! * 100
+                            var g = Float(tmpPrice)! / Float(tmpweight)! 
                             var q = Float(tmpPrice)! / Float(tmpQuantity)!
                             
                             gprice = "\(round(g))"

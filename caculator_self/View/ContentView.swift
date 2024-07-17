@@ -11,8 +11,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView() {
-                
-                
                 CalculatorView().tabItem {
                     Text("홈화면")
                     Image(systemName: "house")
