@@ -11,13 +11,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView() {
-                CalculatorView().tabItem {
+                CalculatorView(price: Price()).tabItem {
                     Text("홈화면")
                     Image(systemName: "house")
                     
                 }.tag(1)
                 
-                CompareView().tabItem {
+                CompareView(priceObj: Price()).tabItem {
                     
                     Image(systemName: "basket")
                     Text("장바구니")

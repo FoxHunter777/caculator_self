@@ -8,26 +8,32 @@
 import SwiftUI
 
 struct CompareBlock: View {
+//    @ObservedObject var priceObj: Price
+    var productName: String = "제품이름"
+    var productPrice: String = "가격"
+    var bgColor: Color = .gray
+    
+    
     var body: some View {
         ZStack {
             VStack {
                 Rectangle()
                     .frame(width: 170, height: 170)
                     .cornerRadius(20)
-                    .foregroundColor(Color.gray)
+                    .foregroundColor(bgColor)
             }
             VStack(){
                 
                 HStack {
                     Spacer()
-                    Text("제품이름")
+                    Text(productName)
                         .font(.title)
                         .fontWeight(.bold)
                 }.padding(.horizontal)
                     .padding(.top, 50)
                 HStack {
                     Spacer()
-                    Text("가격")
+                    Text(productPrice)
                         
                 }.padding(.horizontal)
                 

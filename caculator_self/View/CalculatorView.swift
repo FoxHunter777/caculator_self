@@ -14,8 +14,13 @@ struct CalculatorView: View {
     
     @State var tmpName:String = ""
     @State var tmpPrice:String = ""
-    @State var tmpweight:String = ""
+    @State var tmpWeight:String = ""
     @State var tmpQuantity:String = ""
+    
+    //var tmpNameArr: [String] = []
+    //var tmpQpriceArr: [String] = []
+    //var tmpGpriceArr: [String] = []
+    @ObservedObject var price: Price
     
     var body: some View {
         VStack{
@@ -89,7 +94,7 @@ struct CalculatorView: View {
                         
                         HStack{
                             HStack {
-                                TextField("제품 무게 입력", text: $tmpweight)
+                                TextField("제품 무게 입력", text: $tmpWeight)
                             }
                             .padding(10)
                             .border(Color.black)
@@ -106,7 +111,7 @@ struct CalculatorView: View {
                     
                     HStack {
                         Button(action: {
-                            var g = Float(tmpPrice)! / Float(tmpweight)! 
+                            var g = Float(tmpPrice)! / Float(tmpWeight)!
                             var q = Float(tmpPrice)! / Float(tmpQuantity)!
                             
                             gprice = "\(round(g))"
@@ -123,6 +128,19 @@ struct CalculatorView: View {
                     
                     HStack {
                         Button(action: {
+                            
+                            price.add(tmpName, tmpQuantity, gprice, qprice)
+                            qprice = "0"
+                            gprice = "0"
+                            
+                            tmpName = ""
+                            tmpPrice = ""
+                            tmpWeight = ""
+                            tmpQuantity = ""
+                            
+                            
+                            //tmpNameArr.append(tmpName)
+                            
                             
                         }, label: {
                             Text("장바구니 추가")
@@ -144,5 +162,5 @@ struct CalculatorView: View {
 }
 
 #Preview {
-    CalculatorView()
+    CalculatorView(price: Price())
 }

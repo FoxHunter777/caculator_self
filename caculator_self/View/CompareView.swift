@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CompareView: View {
+    @ObservedObject var priceObj: Price
+    //@Binding var name: String
     
-    //@Binding var name: String 
-    
-    //목록을 1부터 1000까지 만듬
+    //목록을 1부터 10까지 만듬
     let data = Array(1...10).map { "목록 \($0)"}
     
     //화면을 그리드형식으로 꽉채워줌
@@ -36,5 +36,5 @@ struct CompareView: View {
 }
 
 #Preview {
-    CompareView()
+    CompareView(priceObj: Price())
 }
