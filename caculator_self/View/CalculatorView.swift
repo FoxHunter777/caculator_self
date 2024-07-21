@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct CalculatorView: View {
+    @ObservedObject var priceData: Price = Price()
+    
     @State var gprice: String = "0"
     @State var qprice: String = "0"
     
@@ -128,6 +130,7 @@ struct CalculatorView: View {
                     
                     HStack {
                         Button(action: {
+                            priceData.add(tmpName, tmpQuantity, gprice, qprice)
                             
                             price.add(tmpName, tmpQuantity, gprice, qprice)
                             qprice = "0"

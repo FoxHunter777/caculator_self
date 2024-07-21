@@ -8,12 +8,16 @@
 import Foundation
 
 class Price: Identifiable, ObservableObject{
-    var id = UUID()
+    @Published var id = UUID()
     
     @Published var per_gram: [String] = []  //g당 가격
     @Published var per_one:[String] = []  //1개당 가격
     @Published var names:[String] = []  //제품 이름
     @Published var quantity:[String] = [] //개수 정보
+    
+    init() {
+        self.names = ["eunsu"]
+    }
     
     func add(_ name:String, _ q:String, _ pg: String, _ po: String){
         names.append(name)
